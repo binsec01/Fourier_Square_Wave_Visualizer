@@ -126,7 +126,7 @@ def draw_waveform():
     # Draw individual harmonic components (epicycles style)
     harmonic_colors = [RED, GREEN, BLUE, PURPLE, CYAN, ORANGE]
     current_x = x_offset - 80
-    current_y = y_center + 200  # Above main waveform
+    current_y = y_center # main waveform
     
     for k in range(1, N + 1):
         harmonic_num = 2*k - 1
@@ -222,10 +222,10 @@ def draw_harmonic_bars():
     """Draw frequency spectrum bar chart"""
     bar_width = 30
     start_x = SCREEN_WIDTH - 280
-    start_y = y_center - 150
+    start_y = y_center - 300
     
     # Draw title
-    draw_text(start_x, start_y + 130, "FREQUENCY SPECTRUM", WHITE)
+    draw_text(start_x, start_y - 50, "FREQUENCY SPECTRUM", WHITE)
     
     # Draw bars for each harmonic
     max_bars = min(N, 12)  # Show up to 12 harmonics
